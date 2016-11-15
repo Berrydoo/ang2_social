@@ -4,7 +4,17 @@ var User = require('../models/user');
 
 
 router.get('/', function(req, res, next) {
-    res.render('node');
+
+    User.findOne({}, (err, doc) => {
+        if (err) {
+            return res.send('Error!');
+        }
+
+        res.render('node', {
+            email: doc.email
+        });
+    });
+
 });
 
 router.post('/', function(req, res, next) {
