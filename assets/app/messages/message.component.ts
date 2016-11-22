@@ -12,7 +12,7 @@ import { MessageService } from './message.service';
       font-size: 12px;
       width: 80%;
     }
-    .config {
+    .config { 
       display: inline-block;
       text-align: right;
       font-size: 12px;
